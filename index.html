@@ -20,10 +20,10 @@
 <body>
     <div class='title d-flex justify-content-center my-3'><h1>Shopper Flow</h1></div>
     <ul class='mx-5'>
-        <li><div class='screen-title '><h4>Online shopper goes to PetCo.com</h4></div></li>
-        <li><div class='screen-title'><h4>Online shopper finds desired items and adds them to cart</h4></div></li>
-        <li><div class='screen-title mb-5'><h4>Shopper views cart...</h4></div></li>
-        <li><div class='screen-title'><h4>Shopper's cart</h4></div></li>
+        <li><div class='bullet-title '><h4>Online shopper goes to PetCo.com</h4></div></li>
+        <li><div class='bullet-title'><h4>Online shopper finds desired items and adds them to cart</h4></div></li>
+        <li><div class='bullet-title mb-5'><h4>Online shopper views cart...</h4></div></li>
+        <li><div class='bullet-title'><h4>Shopper's cart</h4></div></li>
     </ul>
     <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <div class='screen' id='cart'> 
@@ -31,7 +31,7 @@
     </div>
     <div class='screen-title d-flex justify-content-center mx-5 mb-5'><h4>** Shopper selects "Paayj" **</h4></div>
 
-
+    <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <ul class='mx-5'>
         <li><div class='screen-title'><h4>To confirm if the shopper is a Paayj member or not...</h4></div></li>
     </ul>
@@ -46,12 +46,49 @@
         <div class='continue-button d-flex justify-content-center mx-3 mt-5'><h4 class='mt-2'>Continue</h4></div>
     </div>
     <ul class='mx-5'>
-        <li><div class='screen-title'><h4>If the phone number is registered with Paayj, the shopper is a member</h4></div></li>
-        <li><div class='screen-title mb-5'><h4>Members are instructed to go to the Paayj app on their phone and confirm the purchase</h4></div></li>
-        <li><div class='screen-title'><h4>If the phone number is not registered with Paayj, the shopper is a guest</h4></div></li>
+        <li><div class='bullet-title'><h4>If the phone number is registered with Paayj, the shopper is a member</h4></div></li>
+        <li><div class='bullet-title'><h4>Members are instructed to go to the Paayj app on their phone and confirm the purchase</h4></div></li>
+        <li><div class='bullet-title mb-5'><h4>If the phone number is not registered with Paayj, the shopper is a guest</h4></div></li>
+        <!--<li><div class='bullet-title'><h4>After this, the online shopper selects shipping option, adds any promotion codes, and....</h4></div></li>
+        <li><div class='bullet-title'><h4>Inputs the required payment information to execute the transaction through Paayj!</h4></div></li> -->
+    </ul> 
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+    <div class='title d-flex justify-content-center my-3'><h1>Member UI</h1></div>
+    <ul class='mx-5'>
+        <li>Members have already inputted card information so on the online payment terminal, they will select the cards they wish to us and set the desired split</li>
+        <li>John Doe is a member with 4 cards he has already inputted into Paayj</li>
+        <li>John will select the cards he wants to pay with and input the amount he wants to charge to each card</li>
     </ul>
-
-    <div class='title d-flex justify-content-center my-3'><h1>Guest Flow</h1></div>
+    <div class='bullet-title my-3' id='add-payment-title'><h3>Add Payment</h3></div>
+    <div class='member-payment'>
+        <div class='m-3'><h3>Paayj</h3></div>
+        <div class='user'>
+            <div class='imgcontainer'><img src="johndoe.png" alt="userpic" id='johndoepic'></div>
+            <div class='user-nameemail'>
+                <h5 class='mt-2 mb-0'> John Doe</h5>
+                <p class='email mt-0'> johndoe@gmail.com </p>
+            </div>
+        </div>
+        <div class='members-cards mb-1'> 
+            <div class='card'><label><input type="checkbox" class="checkbox"> Visa Credit 1 </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox"> Chase Sapphire </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" checked> AMEX </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" checked> Visa Debit </label></div>
+        </div>
+        <div class='addcard mx-3 mb-3'><button type="button">Add Card</button></div>
+        <div class='numbers mx-3'>
+            <h5> Order Total: $363.05 </h5>
+            <p class='mb-0 '> Denote how much you would like to charge to the selected cards</p>
+            <p class='mt-0 '>Enter either the percentage or the amount</p>
+            <div class='selectedcard'> 
+                <div class='splitcard'><p>AMEX</p><input type="text" class="splitcardform mx-5" placeholder="40%"></div>
+                <div class='splitcard'><p>Visa Debit</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
+            </div>
+        </div>
+        <div><p class='pay-button'>Pay</p></div>
+    </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------- -->
+    <div class='title d-flex justify-content-center my-3'><h1>Guest UI</h1></div>
 
     <script src="main.js"></script>
 </body>
