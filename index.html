@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1d1dcdf7db.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
@@ -70,25 +70,66 @@
             </div>
         </div>
         <div class='members-cards mb-1'> 
-            <div class='card'><label><input type="checkbox" class="checkbox"> Visa Credit 1 </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox"> Chase Sapphire </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox" checked> AMEX </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox" checked> Visa Debit </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Credit 1'> Visa Credit 1 </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" id='Chase Sapphire'> Chase Sapphire </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" id='AMEX' checked> AMEX </label></div>
+            <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Debit' checked> Visa Debit </label></div>
         </div>
-        <div class='addcard mx-3 mb-3'><button type="button">Add Card</button></div>
+        <div class='addcard mx-3 mb-3' style='text-align: right;'><button class='addcardbutt' type="button">Add Card</button></div>
         <div class='numbers mx-3'>
-            <h5> Order Total: $363.05 </h5>
-            <p class='mb-0 '> Denote how much you would like to charge to the selected cards</p>
-            <p class='mt-0 '>Enter either the percentage or the amount</p>
+            <h5 class="d-flex justify-content-center"> Order Total: $363.05 </h5>
+            <p class='d-flex justify-content-center mb-0 '> Denote how much you would like to charge to the selected cards</p>
+            <p class='d-flex justify-content-center mt-0 '>Enter either the percentage or the amount</p>
             <div class='selectedcard'> 
-                <div class='splitcard'><p>AMEX</p><input type="text" class="splitcardform mx-5" placeholder="40%"></div>
+                <div class='splitcard'><p>AMEX</p><input type="text" class="splitcardform mx-3" placeholder="40%"></div>
                 <div class='splitcard'><p>Visa Debit</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
             </div>
         </div>
-        <div><p class='pay-button'>Pay</p></div>
+        <div class='mx-3' style="text-align:right;"><button class='pay' type="button">Pay</button></div>
     </div>
+    <br>
+    <br>
 <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <div class='title d-flex justify-content-center my-3'><h1>Guest UI</h1></div>
+    <ul class='mx-5'>
+        <li><div class='bullet-title'><h4>Guests have not inputted any information to Paayj</h4></div></li>
+        <li><div class='bullet-title'><h4>As such, they will be taken to next screen, as if they selected to proceed to checkout</h4></div></li>
+        <li><div class='bullet-title'><h4>At checkout, the Guest will input their shipping address</h4></div></li>
+        <li><div class='bullet-title'><h4>At payment, the Guest they will see a box like this...</h4></div></li>
+    </ul>
+    <div class='inputnewcard'>
+        <h3 class='mx-2 mb-2'>Input first card</h3>
+        <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
+        <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
+        <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
+    </div>
+    <ul class='mt-5 mx-5'>
+        <li><div class='bullet-title'><h4>And then another...</h4></div></li>
+    </ul>
+    <div class='inputnewcard mb-5'>
+        <h3 class='mx-2 mb-2'>Input second card</h3>
+        <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
+        <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
+        <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
+    </div>
+    <ul class='mx-5'>
+        <li><div class='bullet-title'><h4>Guests will then be asked if their billing and shipping address are the same</h4></div></li>
+        <li><div class='bullet-title'><h4>If not, they will enter new billing address</h4></div></li>
+        <li><div class='bullet-title'><h4>And then...</h4></div></li>
+    </ul>
+    <div class='guestnumbers'>
+        <h5 class='mx-3'> Order Total: $363.05 </h5>
+        <p class=' mx-3 mb-0 '>Denote how much you would like to charge each card</p>
+        <p class='mx-3 mt-0 '>Enter either the percentage or the amount</p>
+        <div class='selectedcard'> 
+            <div class='splitcard mx-3'><p>Visa Debit ending in 4420</p><input type="text" class="splitcardform mx-3" placeholder="40%"></div>
+            <div class='splitcard mx-3'><p>American Express ending in 1234</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
+        </div>
+        <div class='mx-3' style="text-align:right;"><button class='pay' type="button">Pay</button></div>
+    </div>
+    <ul>
+        <li><div class='bullet-title'><h4> After payment, the guest has the ability to create a Paayj account with one click and is encouraged download the app for further benefits</h4></div></li>
+    </ul>
 
     <script src="main.js"></script>
 </body>

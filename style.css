@@ -63,7 +63,7 @@ body {
 }
 .member-payment {
     width: 50%;
-    height: 530px;
+    height: 600px;
     margin: auto;
     border-style: solid;
     border-color: #020202;
@@ -101,12 +101,12 @@ body {
 }
 .members-cards {
     display: flex;
-    width: 80%;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-top: 2rem;
+    border: none;
     margin-left: auto;
     margin-right: auto;
-    border: none;
 }
 .card {
     border: none;
@@ -114,14 +114,45 @@ body {
 .splitcard {
     display: flex;
     margin-bottom: 1rem;
+    justify-content: space-between;
 }
-.pay-button{
-    font-size: 20px;
-    text-align: right;
-    margin-right: 2rem;
-    background-color: #189100;
+.pay {
+    background-color: rgb(57, 156, 0);
     color: white;
-    margin-left: 85%;
-    padding-right: 20px;
-    font-weight: bold;
+}
+.addcardbutt {
+    background-color: #020202;
+    color: white;
+}
+
+
+
+
+
+
+.inputnewcard {
+    border-style: solid;
+    border-color: black;
+    width: 25%;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textandform {
+    display: flex;
+    justify-content: space-between;
+}
+.newcardform {
+    width: auto;
+}
+
+
+.guestnumbers {
+    border-style: solid;
+    border-color: black;
+    width: 30%;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
 }
