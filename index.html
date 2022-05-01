@@ -21,19 +21,19 @@
     <div class='title d-flex justify-content-center my-3'><h1>Shopper Flow</h1></div>
     <ul class='mx-5'>
         <li><div class='bullet-title '><h4>Online shopper goes to PetCo.com</h4></div></li>
-        <li><div class='bullet-title'><h4>Online shopper finds desired items and adds them to cart</h4></div></li>
-        <li><div class='bullet-title mb-5'><h4>Online shopper views cart...</h4></div></li>
+        <li><div class='bullet-title'><h4>Shopper finds desired items and adds them to cart</h4></div></li>
+        <li><div class='bullet-title mb-5'><h4>The shopper then views cart...</h4></div></li>
         <li><div class='bullet-title'><h4>Shopper's cart</h4></div></li>
     </ul>
     <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <div class='screen' id='cart'> 
         <img src="cart.png" alt="cartpic" id='cartpic'>
     </div>
-    <div class='screen-title d-flex justify-content-center mx-5 mb-5'><h4>** Shopper selects "Paayj" **</h4></div>
+    <div class='screen-title d-flex justify-content-center mx-5 mb-5'><p>** Shopper selects "Paayj" **</p></div>
 
     <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <ul class='mx-5'>
-        <li><div class='screen-title'><h4>To confirm if the shopper is a Paayj member or not...</h4></div></li>
+        <li><div class='screen-title'><h4>First, we must determine if the shopper is a Paayj member</h4></div></li>
     </ul>
     <div class='enter-phone-number'>
         <div class='d-flex justify-content-center my-3 mb-5'><h3>Paayj</h3></div>
@@ -45,91 +45,97 @@
         </div>
         <div class='continue-button d-flex justify-content-center mx-3 mt-5'><h4 class='mt-2'>Continue</h4></div>
     </div>
-    <ul class='mx-5'>
-        <li><div class='bullet-title'><h4>If the phone number is registered with Paayj, the shopper is a member</h4></div></li>
-        <li><div class='bullet-title'><h4>Members are instructed to go to the Paayj app on their phone and confirm the activity</h4></div></li>
-        <li><div class='bullet-title mb-5'><h4>If the phone number is not registered with Paayj, the shopper is a guest</h4></div></li>
+    <ul class='mx-5' style="text-align: center;list-style-type:none;">
+        <li><div class='bullet-title'><p>If the shopper is a member they will go to the Paayj app and confirm the activity</p></div></li>
+        <li><div class='bullet-title mb-5'><p>If the phone number is not registered with Paayj, the shopper is a guest</p></div></li>
         <!--<li><div class='bullet-title'><h4>After this, the online shopper selects shipping option, adds any promotion codes, and....</h4></div></li>
         <li><div class='bullet-title'><h4>Inputs the required payment information to execute the transaction through Paayj!</h4></div></li> -->
     </ul> 
 <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <div class='title d-flex justify-content-center my-3'><h1>Member UI</h1></div>
-    <ul class='mx-5'>
-        <li>Members have already inputted card information so on the online payment terminal, they will select the cards they wish to us and set the desired split</li>
-        <li>John Doe is a member with 4 cards he has already inputted into Paayj</li>
-        <li>John will select the cards he wants to pay with and input the amount he wants to charge to each card</li>
+    <ul class='mx-5' style="text-align: center;list-style-type:none;">
+        <li>Members have already inputted card information, they simply <b>select the cards</b> and <b>set the split</b></li>
     </ul>
-    <div class='bullet-title my-3' id='add-payment-title'><h3>Add Payment</h3></div>
-    <div class='member-payment'>
-        <div class='m-3'><h3>Paayj</h3></div>
-        <div class='user'>
-            <div class='imgcontainer'><img src="johndoe.png" alt="userpic" id='johndoepic'></div>
-            <div class='user-nameemail'>
-                <h5 class='mt-2 mb-0'> John Doe</h5>
-                <p class='email mt-0'> johndoe@gmail.com </p>
+    <div class='membs'>
+        <div class='member-payment'>
+            <div class='m-3'><h3>Paayj</h3></div>
+            <div class='user'>
+                <div class='imgcontainer'><img src="johndoe.png" alt="userpic" id='johndoepic'></div>
+                <div class='user-nameemail'>
+                    <h5 class='mt-2 mb-0'> John Doe</h5>
+                    <p class='email mt-0'> johndoe@gmail.com </p>
+                </div>
+            </div>
+            <div class='members-cards mb-1'> 
+                <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Credit 1'> Visa Credit 1 </label></div>
+                <div class='card'><label><input type="checkbox" class="checkbox" id='Chase Sapphire'> Chase Sapphire </label></div>
+                <div class='card'><label><input type="checkbox" class="checkbox" id='AMEX' checked> AMEX </label></div>
+                <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Debit' checked> Visa Debit </label></div>
+            </div>
+            <div class='addcard mx-3 mb-3' style='text-align: right;'><button class='addcardbutt' type="button">Add Card</button></div>
+            <div class='numbers mx-3'>
+                <h5 class="d-flex justify-content-center"> Order Total: $363.05 </h5>
+                <p class='d-flex justify-content-center mb-0 '> Denote how much you would like to charge to the selected cards</p>
+                <p class='d-flex justify-content-center mt-0 '>Enter either the percentage or the amount</p>
+                <div class='selectedcard'> 
+                 <div class='splitcard'><p>AMEX</p><p>Visa Debit</p></div>
+                 <div class='splitcard'><input type="text" class="splitcardform mx-3" placeholder="40%"><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
+                </div>
+            </div>
+            <div class='mx-3' style="text-align:right;"><button class='pay' type="button">Pay</button></div>
+        </div>
+        <div class='memberAddCard'>
+            <div class='mb-5'>
+                <h3 class='mx-2 mb-2'>Add card</h3>
+                <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
+                <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
+                <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
             </div>
         </div>
-        <div class='members-cards mb-1'> 
-            <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Credit 1'> Visa Credit 1 </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox" id='Chase Sapphire'> Chase Sapphire </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox" id='AMEX' checked> AMEX </label></div>
-            <div class='card'><label><input type="checkbox" class="checkbox" id='Visa Debit' checked> Visa Debit </label></div>
-        </div>
-        <div class='addcard mx-3 mb-3' style='text-align: right;'><button class='addcardbutt' type="button">Add Card</button></div>
-        <div class='numbers mx-3'>
-            <h5 class="d-flex justify-content-center"> Order Total: $363.05 </h5>
-            <p class='d-flex justify-content-center mb-0 '> Denote how much you would like to charge to the selected cards</p>
-            <p class='d-flex justify-content-center mt-0 '>Enter either the percentage or the amount</p>
-            <div class='selectedcard'> 
-                <div class='splitcard'><p>AMEX</p><input type="text" class="splitcardform mx-3" placeholder="40%"></div>
-                <div class='splitcard'><p>Visa Debit</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
-            </div>
-        </div>
-        <div class='mx-3' style="text-align:right;"><button class='pay' type="button">Pay</button></div>
     </div>
     <br>
     <br>
 <!-- ----------------------------------------------------------------------------------------------------------------------------- -->
     <div class='title d-flex justify-content-center my-3'><h1>Guest UI</h1></div>
     <ul class='mx-5'>
-        <li><div class='bullet-title'><h4>Guests have not inputted any information to Paayj</h4></div></li>
-        <li><div class='bullet-title'><h4>As such, they will be taken to next screen, as if they selected to proceed to checkout</h4></div></li>
-        <li><div class='bullet-title'><h4>At checkout, the Guest will input their shipping address</h4></div></li>
-        <li><div class='bullet-title'><h4>At payment, the Guest they will see a box like this...</h4></div></li>
+        <li><div class='bullet-title'><h4>Guests have not inputted any information to Paayj...</h4></div></li>
     </ul>
-    <div class='inputnewcard'>
-        <h3 class='mx-2 mb-2'>Input first card</h3>
-        <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
-        <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
-        <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
+    <div class='guestinputs'>
+        <div class='inputnewcard mx-2'>
+            <h3 class='mx-2 mb-2'>Input first card</h3>
+            <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
+            <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
+            <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
+        </div>
+        <div class='inputnewcard mx-2 mb-3'>
+            <h3 class='mx-2 mb-2'>Input second card</h3>
+            <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
+            <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
+            <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
+        </div>
     </div>
-    <ul class='mt-5 mx-5'>
-        <li><div class='bullet-title'><h4>And then another...</h4></div></li>
-    </ul>
-    <div class='inputnewcard mb-5'>
-        <h3 class='mx-2 mb-2'>Input second card</h3>
-        <div class='textandform mx-3 mt-3'><p>Input Card Number</p><input type="text" class="newcardform mx-2" placeholder="1234 1234 1234 1234"></div>
-        <div class='textandform mx-3 mt-3'><p style="padding-left: 35px;">CVV</p><input type="text" class="newcardform mx-2" placeholder="111"></div>
-        <div class='textandform mx-3 mt-3'><p>Expiration Date</p><input type="text" class="newcardform mx-2" placeholder="dd/mm/yyyy"></div>
-    </div>
-    <ul class='mx-5'>
-        <li><div class='bullet-title'><h4>Guests will then be asked if their billing and shipping address are the same</h4></div></li>
-        <li><div class='bullet-title'><h4>If not, they will enter new billing address</h4></div></li>
-        <li><div class='bullet-title'><h4>And then...</h4></div></li>
+    <ul class='mx-5' style="text-align: center;list-style-type:none;">
+        <li><div class='bullet-title'><p>Guests will confirm their shipping and billing address are the same, or enter a different address</p></div></li>
+        <li><div class='bullet-title'><p>And then...</p></div></li>
     </ul>
     <div class='guestnumbers'>
-        <h5 class='mx-3'> Order Total: $363.05 </h5>
+        <h5 class='mx-3 mt-2'> Order Total: $363.05 </h5>
         <p class=' mx-3 mb-0 '>Denote how much you would like to charge each card</p>
         <p class='mx-3 mt-0 '>Enter either the percentage or the amount</p>
         <div class='selectedcard'> 
             <div class='splitcard mx-3'><p>Visa Debit ending in 4420</p><input type="text" class="splitcardform mx-3" placeholder="40%"></div>
-            <div class='splitcard mx-3'><p>American Express ending in 1234</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
+            <div class='splitcard mx-3'><p>AMEX ending in 1234</p><input type="text" class="splitcardform mx-3" placeholder="60%"></div>
         </div>
         <div class='mx-3' style="text-align:right;"><button class='pay' type="button">Pay</button></div>
     </div>
-    <ul>
+    <ul style="text-align: center;list-style-type:none;">
         <li><div class='bullet-title'><h4> After payment, the guest has the ability to create a Paayj account with one click and is encouraged download the app for further benefits</h4></div></li>
     </ul>
+    <div class='convertToMember'>
+        <h3 class=' mx-3'>Payment split complete!</h3>
+        <div class='card mx-3'><label><input type="checkbox" class="checkbox"> Click here to register my Paayj account</label></div>
+        <div><p class='mx-5 mt'>Download Paayj in the app store to earn rewards on this and future pruchases</p></div>
+    </div>
 
     <script src="main.js"></script>
 </body>
